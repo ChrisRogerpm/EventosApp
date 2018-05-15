@@ -23,6 +23,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import org.json.JSONArray;
@@ -90,10 +91,11 @@ public class EventosMapFragment extends Fragment implements OnMapReadyCallback {
                         for (int i = 0; i < eventoList.size(); i++) {
                             Evento location = eventoList.get(i);
                             LatLng position = new LatLng(location.getLatitud(), location.getLongitud());
-                            googleMap.addMarker(new MarkerOptions().position(position).title(location.getNombreevento()));
+                            Marker marker = googleMap.addMarker(new MarkerOptions().position(position).title(location.getNombreevento()));
                             if (i == 0) {
                                 CameraPosition camPos = new CameraPosition(position, ZOOM_LEVEL, TILT_LEVEL, BEARING_LEVEL);
                                 googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(camPos));
+                                marker.showInfoWindow();
                             }
                         }
                     }
