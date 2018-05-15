@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EventosApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mapaevento">MapaEvento</string>
+    <string name="eventos">Eventos</string>
+    <string name="inicio">Inicio</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
