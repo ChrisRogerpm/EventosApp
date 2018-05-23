@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.example.eventosapp.eventosapp.Activities.MainActivity;
 import com.example.eventosapp.eventosapp.Class.Evento;
 import com.example.eventosapp.eventosapp.R;
 
@@ -68,5 +70,8 @@ public class AdapterEvento extends RecyclerView.Adapter<AdapterEvento.EventoView
     public void onBindViewHolder(EventoViewHolder viewHolder, int i) {
         Evento evento = items.get(i);
         viewHolder.nombreevento.setText(evento.getNombreevento());
+        Glide.with(context)
+                .load(MainActivity.HOST +MainActivity.PATH+ evento.getImagenevento())
+                .into(viewHolder.imagenevento);
     }
 }

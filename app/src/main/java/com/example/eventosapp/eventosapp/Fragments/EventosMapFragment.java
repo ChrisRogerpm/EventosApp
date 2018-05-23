@@ -15,6 +15,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.eventosapp.eventosapp.Activities.MainActivity;
 import com.example.eventosapp.eventosapp.Class.Evento;
 import com.example.eventosapp.eventosapp.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -42,12 +43,13 @@ public class EventosMapFragment extends Fragment implements OnMapReadyCallback {
     SupportMapFragment supportMapFragment;
     private List<Evento> eventoList;
     private int requestCount = 1;
-    public static String URL_EVENTOS = "http://192.168.160.230/api/ListaEventos";
+    public static String URL_EVENTOS = MainActivity.HOST + "/api/ListaEventos";
 
     private static final int ZOOM_LEVEL = 15;
     private static final int TILT_LEVEL = 0;
     private static final int BEARING_LEVEL = 0;
     private Context mContext;
+
     public EventosMapFragment() {
         // Required empty public constructor
     }

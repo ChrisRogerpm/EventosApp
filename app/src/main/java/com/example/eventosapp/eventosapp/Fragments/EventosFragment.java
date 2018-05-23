@@ -15,6 +15,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.eventosapp.eventosapp.Activities.MainActivity;
 import com.example.eventosapp.eventosapp.Adapters.AdapterEvento;
 import com.example.eventosapp.eventosapp.Class.Evento;
 import com.example.eventosapp.eventosapp.R;
@@ -38,7 +39,7 @@ public class EventosFragment extends Fragment implements AdapterEvento.Click {
     private RecyclerView.Adapter adapter;
     private RequestQueue requestQueue;
     int requestCount = 1;
-    String URL_EVENTOS = "http://192.168.160.230/api/ListaEventos";
+    String URL_EVENTOS = MainActivity.HOST + "/api/ListaEventos";
 
     public EventosFragment() {
         // Required empty public constructor
@@ -60,7 +61,7 @@ public class EventosFragment extends Fragment implements AdapterEvento.Click {
         requestQueue = Volley.newRequestQueue(getActivity());
         GetData();
         //obtener recycler
-        adapter = new AdapterEvento(eventoList, getActivity(),this);
+        adapter = new AdapterEvento(eventoList, getActivity(), this);
         recyclerView.setAdapter(adapter);
 
         return v;
@@ -70,6 +71,7 @@ public class EventosFragment extends Fragment implements AdapterEvento.Click {
         requestQueue.add(GetDataServer());
         requestCount++;
     }
+
     private JsonArrayRequest GetDataServer() {
 
         return new JsonArrayRequest(URL_EVENTOS,
@@ -82,6 +84,7 @@ public class EventosFragment extends Fragment implements AdapterEvento.Click {
                             try {
                                 json = response.getJSONObject(i);
                                 evento.setNombreevento(json.getString("nombre_evento"));
+                                evento.setImagenevento(json.getString("imagen"));
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }

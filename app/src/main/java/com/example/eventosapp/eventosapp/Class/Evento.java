@@ -4,12 +4,20 @@ public class Evento {
     private String nombreevento;
     private String fecha;
     private String lugar;
-    private int imagenevento;
+    private String imagenevento;
     private double latitud;
     private double longitud;
 
     public String getNombreevento() {
         return nombreevento;
+    }
+
+    public String getImagenevento() {
+        return imagenevento;
+    }
+
+    public void setImagenevento(String imagenevento) {
+        this.imagenevento = imagenevento;
     }
 
     public void setNombreevento(String nombreevento) {
@@ -30,14 +38,6 @@ public class Evento {
 
     public void setLugar(String lugar) {
         this.lugar = lugar;
-    }
-
-    public int getImagenevento() {
-        return imagenevento;
-    }
-
-    public void setImagenevento(int imagenevento) {
-        this.imagenevento = imagenevento;
     }
 
     public double getLatitud() {
