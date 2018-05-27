@@ -3,16 +3,12 @@ package com.example.eventosapp.eventosapp.Activities;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-
 import com.example.eventosapp.eventosapp.Fragments.CategoriaFragment;
-import com.example.eventosapp.eventosapp.Fragments.EventosFragment;
 import com.example.eventosapp.eventosapp.Fragments.EventosMapFragment;
 import com.example.eventosapp.eventosapp.Fragments.LoginFragment;
 import com.example.eventosapp.eventosapp.Fragments.PerfilFragment;
@@ -24,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     LoginFragment loginFragment;
     CategoriaFragment categoriaFragment;
     EventosMapFragment eventosMapFragment;
-    public static final String HOST = "http://192.168.160.230";
+    public static final String HOST = "http://192.168.8.103";
     public static final String PATH = "/images/";
     private boolean CheckLogin = false;
 
@@ -35,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-//                    loginFragment = new LoginFragment();
-//                    setFragment(loginFragment);
                     CheckSesion();
                     return true;
                 case R.id.navigation_dashboard:
