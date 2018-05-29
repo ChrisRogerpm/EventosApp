@@ -1,177 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:animationCache="false"
     android:background="#0E1D34"
     tools:context=".Fragments.EventoDetalleFragment">
 
-    <ImageView
-        android:id="@+id/imageview_eventodetalle"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@drawable/slider2" />
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:animationCache="false"
+        android:background="#0E1D34"
+        tools:context=".Fragments.EventoDetalleFragment">
 
-    <TextView
-        android:id="@+id/nombre_evento_detalle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/fecha_evento_detalle"
-        android:layout_toEndOf="@+id/asistentes"
-        android:text="De reversa mami"
-        android:textColor="@color/colorWhite"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:layout_toRightOf="@+id/asistentes" />
+        <LinearLayout
+            android:id="@+id/header_detalleevento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageview_eventodetalle"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/slider2" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/fecha_evento_detalle"
-        android:layout_width="wrap_content"
-        android:layout_height="36dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageview_eventodetalle"
-        android:layout_marginStart="20dp"
-        android:text="19"
-        android:textColor="#969696"
-        android:textSize="30sp"
-        android:layout_marginLeft="20dp"
-        android:layout_alignParentLeft="true" />
-
-    <TextView
-        android:id="@+id/mes_evento_detalle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/fecha_evento_detalle"
-        android:layout_marginStart="17dp"
-        android:text="MAY"
-        android:textSize="20sp"
-        android:textColor="#2333F9"
-        android:textStyle="bold"
-        android:layout_marginLeft="17dp"
-        android:layout_alignParentLeft="true" />
-
-    <TextView
-        android:id="@+id/direccion_evento_detalle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/nombre_evento_detalle"
-        android:layout_below="@+id/nombre_evento_detalle"
-        android:text="Solari Plaza"
-        android:textColor="#2333F9"
-        android:layout_alignLeft="@+id/nombre_evento_detalle" />
-
-    <TextView
-        android:id="@+id/descripcion_evento_detalle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="245dp"
-        android:text="Descripcion Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        android:textAlignment="center"
-        android:textColor="@color/colorWhite"
-        android:layout_below="@id/direccion_evento_detalle"
-        android:layout_alignParentLeft="true" />
-
-    <TextView
-        android:id="@+id/asistentes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/fecha_evento_detalle"
-        android:layout_alignTop="@+id/textView4"
-        android:text="Asistentes"
-        android:textColor="@color/colorWhite"
-        android:layout_alignLeft="@+id/fecha_evento_detalle" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="199dp"
-        android:layout_marginStart="134dp"
-        android:text="Valoracion"
-        android:textColor="@color/colorWhite"
-        android:layout_marginLeft="134dp"
-        android:layout_alignParentLeft="true" />
-
-    <TextView
-        android:id="@+id/tv_puntaje_valoracion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/tv_cantidad_asistentes"
-        android:layout_marginStart="152dp"
-        android:text="4.5"
-        android:textColor="@color/colorWhite"
-        android:textSize="30sp"
-        android:layout_marginLeft="152dp"
-        android:layout_alignParentLeft="true" />
-
-    <TextView
-        android:id="@+id/tv_cantidad_asistentes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="142dp"
-        android:layout_marginStart="29dp"
-        android:text="300"
-        android:textColor="@color/colorWhite"
-        android:textSize="30sp"
-        android:layout_marginLeft="29dp"
-        android:layout_alignParentLeft="true" />
-
-    <android.support.v7.widget.AppCompatImageButton
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/asistentes"
-        android:layout_marginEnd="62dp"
-        android:background="@null"
-        android:scaleType="centerCrop"
-        android:src="@drawable/mapa"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="62dp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="#1A293C"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_below="@+id/header_detalleevento"
+            android:id="@+id/contenido_detalleevento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
 
-        <android.support.v7.widget.AppCompatImageButton
-            android:id="@+id/imagen_organizador"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_alignLeft="@+id/fecha_evento_detalle"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/fecha_evento_detalle"
-            android:layout_marginBottom="34dp"
-            android:background="@null"
-            android:scaleType="centerCrop"
-            android:src="@drawable/logocauli" />
+
+            <TextView
+                android:id="@+id/fecha_evento_detalle"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:text="19"
+                android:textColor="#969696"
+                android:textSize="30sp"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:id="@+id/mes_evento_detalle"
+                android:layout_below="@id/fecha_evento_detalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp"
+                android:text="MAY"
+                android:textSize="20sp"
+                android:textColor="#2333F9"
+                android:textStyle="bold"
+                android:layout_marginLeft="17dp"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:id="@+id/nombre_evento_detalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="84dp"
+                android:text="De reversa mami"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="84dp" />
+
+
+
+            <TextView
+                android:id="@+id/direccion_evento_detalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/nombre_evento_detalle"
+                android:layout_below="@+id/nombre_evento_detalle"
+                android:text="Solari Plaza"
+                android:textColor="#2333F9"
+                android:layout_alignLeft="@+id/nombre_evento_detalle" />
+
+            <TextView
+                android:id="@+id/descripcion_evento_detalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/mes_evento_detalle"
+                android:text="Descripcion Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                android:justificationMode="inter_word"
+                android:textColor="@color/colorWhite"
+                android:layout_alignParentLeft="true" />
+        </RelativeLayout>
 
         <TextView
-            android:id="@+id/nombre_organizador"
+            android:id="@+id/tv_puntaje_valoracion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:text="Cauli Eventos"
-            android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
-    </LinearLayout>
 
-</RelativeLayout>
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/tv_cantidad_asistentes"
+            android:layout_marginStart="152dp"
+            android:text="4.5"
+            android:textColor="@color/colorWhite"
+            android:textSize="30sp"
+            android:layout_marginLeft="152dp"
+            android:layout_alignParentLeft="true" />
+        <LinearLayout
+            android:id="@+id/datos"
+            android:gravity="center"
+            android:layout_below="@id/contenido_detalleevento"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/chk_asistentes"
+                android:layout_margin="5dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:button="@null"
+                android:checked="false"
+                android:background="@drawable/asistentes"
+                android:focusable="true"
+                android:layout_marginLeft="16dp"/>
+
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:id="@+id/tv_cant_asistntes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="300"
+                android:textColor="@color/colorWhite"
+                android:textSize="30dp" />
+            <CheckBox
+                android:id="@+id/chk_calificacion"
+                android:layout_margin="5dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:button="@null"
+                android:checked="false"
+                android:background="@drawable/calificacion"
+                android:focusable="true"
+                android:layout_marginLeft="16dp"/>
+
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:id="@+id/tv_calificacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.5"
+                android:textColor="@color/colorWhite"
+                android:textSize="30dp" />
+            <CheckBox
+                android:id="@+id/chk_favorito"
+                android:layout_margin="10dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:button="@null"
+                android:checked="false"
+                android:background="@drawable/favorito"
+                android:focusable="true"
+                android:layout_marginLeft="16dp"/>
+
+            <ImageButton
+                android:id="@+id/ubicacion_evento_detalle"
+                android:layout_margin="5dp"
+                android:scaleType="center"
+                android:padding="5dp"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icono_mapa"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/datos"
+            android:id="@+id/organizador"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#1A293C"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/imagen_organizador"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignLeft="@+id/fecha_evento_detalle"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/fecha_evento_detalle"
+                android:layout_marginBottom="34dp"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logocauli" />
+
+            <TextView
+                android:id="@+id/nombre_organizador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Cauli Eventos"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

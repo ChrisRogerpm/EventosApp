@@ -3,6 +3,7 @@ package com.example.eventosapp.eventosapp.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -40,7 +41,7 @@ public class EventosFragment extends Fragment implements AdapterEvento.Click {
     private RecyclerView.Adapter adapter;
     private RequestQueue requestQueue;
     int requestCount = 1;
-    String URL_EVENTOS = MainActivity.HOST + "/api/ListaEventos";
+    static final String URL_EVENTOS = MainActivity.HOST + "/api/ListaEventos";
 
     public EventosFragment() {
         // Required empty public constructor
@@ -105,9 +106,15 @@ public class EventosFragment extends Fragment implements AdapterEvento.Click {
     @Override
     public void onItemClick(AdapterEvento.EventoViewHolder holder, int posicion) {
         EventoDetalleFragment eventoDetalleFragment = new EventoDetalleFragment();
-        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, eventoDetalleFragment);
-        fragmentTransaction.addToBackStack("eventodetallefragment");
-        fragmentTransaction.commit();
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction()
+        .replace(R.id.fragment_container, eventoDetalleFragment,"tag")
+        .addToBackStack("tag")
+        .commit();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 }

@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     LoginFragment loginFragment;
     CategoriaFragment categoriaFragment;
     EventosMapFragment eventosMapFragment;
-    public static final String HOST = "http://192.168.8.103";
+    public static final String HOST = "http://192.168.160.214";
     public static final String PATH = "/images/";
     private boolean CheckLogin = false;
 
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private void setFragment(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, fragment);
-        fragmentTransaction.disallowAddToBackStack();
+//        fragmentTransaction.disallowAddToBackStack();
         fragmentTransaction.commit();
     }
 

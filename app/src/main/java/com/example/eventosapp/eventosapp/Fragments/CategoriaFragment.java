@@ -53,12 +53,12 @@ public class CategoriaFragment extends Fragment {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
+                viewPager.setCurrentItem(tab.getPosition());
             }
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
+                viewPager.setCurrentItem(tab.getPosition());
             }
         });
 
