@@ -51,7 +51,7 @@
                     android:paddingTop="20dp"
                     android:text="Dia del Skate"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="#6fffff"
+                    android:textColor="#000000"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 

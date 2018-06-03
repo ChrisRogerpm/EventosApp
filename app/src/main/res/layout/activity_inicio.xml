@@ -3,14 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:background="@color/colorfondo"
     tools:context=".Activities.InicioActivity">
 
     <ImageView
         android:id="@+id/imageview_inicio"
-        android:layout_width="211dp"
-        android:layout_height="102dp"
-        android:layout_centerInParent="true"
+        android:layout_width="190dp"
+        android:layout_height="82dp"
+
+
         android:src="@drawable/logotipo_para_apk" />
 
 </RelativeLayout>

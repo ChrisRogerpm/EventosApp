@@ -1,8 +1,11 @@
 <resources>
-    <string name="app_name">EventosApp</string>
+    <string name="app_name">PartyOn</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="mapaevento">MapaEvento</string>
+    <string name="mapaevento">Mapa</string>
     <string name="eventos">Eventos</string>
-    <string name="inicio">Inicio</string>
+    <string name="inicio">Usuario</string>
     <string name="title_activity_maps">Map</string>
+
+    <string name="tv_registro_mensaje">Disfruta de los beneficios</string>
+    <string name="tv_registro_mensaje2"> de ser usuario <font fgcolor='#61C600'> PREMIUM </font> gratis por un mes.</string>
 </resources>

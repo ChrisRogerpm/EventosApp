@@ -11,4 +11,8 @@
     <color name="colorText">#00b6cc</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorTransparentWhite">#cccccc</color>
+
+
+
+    <color name="colorhint_registro_fragment">#83848C</color>
 </resources>

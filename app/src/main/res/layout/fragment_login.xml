@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -7,70 +7,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Fragments.LoginFragment">
 
-    <VideoView
-        android:id="@+id/videoview"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="match_parent">
+        <VideoView
+            android:id="@+id/videoview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </android.support.constraint.ConstraintLayout>
 
-    <EditText
-        android:id="@+id/txt_email"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/usu_pass_ing"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Correo"
-        android:textColor="#fff"
-        android:textColorHint="@color/colorWhite"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.525" />
+        android:layout_marginTop="150dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/txt_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="140dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Contraseña"
-        android:textColor="#fff"
-        android:textColorHint="@color/colorWhite"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.702" />
+        <EditText
+            android:id="@+id/txt_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:alpha="0.5"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:hint="Correo"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textColorHint="@color/colorhint_registro_fragment" />
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Ingresar"
-        app:layout_constraintBottom_toBottomOf="@+id/videoview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
-        app:layout_constraintVertical_bias="0.642" />
+        <EditText
+            android:id="@+id/txt_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:alpha="0.5"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textColorHint="@color/colorhint_registro_fragment" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:alpha="0.5"
+            android:background="@drawable/button_corner"
+            android:text="Ingresar"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/remember"
+        android:layout_below="@+id/usu_pass_ing"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
-</android.support.constraint.ConstraintLayout>
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:checked="true"
+            android:alpha="0.5"
+            android:textSize="13sp"
+            android:textColor="@color/colorhint_registro_fragment"
+            android:text="Recordar" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@+id/remember"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/tv_registro_mensaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorhint_registro_fragment"/>
+        <TextView
+            android:text="@string/tv_registro_mensaje2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/colorhint_registro_fragment"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
