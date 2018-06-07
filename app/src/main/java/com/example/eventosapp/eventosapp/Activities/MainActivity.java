@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.example.eventosapp.eventosapp.Fragments.CategoriaFragment;
 import com.example.eventosapp.eventosapp.Fragments.EventosMapFragment;
@@ -20,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     LoginFragment loginFragment;
     CategoriaFragment categoriaFragment;
     EventosMapFragment eventosMapFragment;
-    public static final String HOST = "http://192.168.8.101";
+    public static final String HOST = "http://192.168.0.13";
     public static final String PATH = "/images/";
     private boolean CheckLogin = false;
 
@@ -59,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationViewEx navigation = (BottomNavigationViewEx) findViewById(R.id.navigation);

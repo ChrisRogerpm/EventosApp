@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.CategoriaFragment">
 
@@ -10,6 +11,7 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:elevation="0dp"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.design.widget.TabLayout
@@ -18,8 +20,8 @@
             android:layout_height="wrap_content"
             app:tabMode="scrollable"
             app:tabIndicatorColor="#61C600"
-
             app:tabSelectedTextColor="#61C600"
+
             android:layout_above="@+id/container_viewpager"/>
     </android.support.design.widget.AppBarLayout>
 
