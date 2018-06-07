@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#001120</color>
-    <color name="colorPrimaryDark">#001120</color>
+    <color name="colorPrimary">#00000000</color><!--BARRA DE MENU RINCIPAL-->
+    <color name="colorPrimaryDark">#000000</color><!--PRIMERA BARRA -->
     <color name="colorAccent">#4075a2</color>
-    <color name="colorNavIcon">#ffffff</color>
+    <color name="colorNavIcon">#333333</color> <!--COLOR ICONOS DE MENU PRINCIPAL -->
     <color name="colorNavText">#ffffff</color>
 
 
-    <color name="colorfondo">#191919</color>
+    <color name="colorfondo">#000000</color> <!--COLOR SCREEN PLASH-->
     <color name="colorText">#00b6cc</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorTransparentWhite">#cccccc</color>
