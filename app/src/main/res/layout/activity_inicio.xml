@@ -3,16 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:gravity="center"
     android:background="@color/colorfondo"
     tools:context=".Activities.InicioActivity">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="90dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <ImageView
         android:id="@+id/imageview_inicio"
         android:layout_width="190dp"
         android:layout_height="82dp"
-
-
         android:src="@drawable/logotipo_para_apk" />
+    </LinearLayout>
 
 </RelativeLayout>
