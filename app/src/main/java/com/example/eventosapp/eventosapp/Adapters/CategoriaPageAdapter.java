@@ -19,7 +19,12 @@ import java.util.List;
 public class CategoriaPageAdapter extends FragmentStatePagerAdapter {
 
     int mNumOfTabs;
-
+    EventosFragment eventosFragment;
+    FiestaFragment fiestaFragment;
+    MusicaFragment musicaFragment;
+    GastronomiaFragment gastronomiaFragment;
+    DeporteFragment deporteFragment;
+    OtrosFragment otrosFragment;
     public CategoriaPageAdapter(FragmentManager fm,int NumOfTabs) {
         super(fm);
         this.mNumOfTabs = NumOfTabs;
@@ -30,22 +35,22 @@ public class CategoriaPageAdapter extends FragmentStatePagerAdapter {
         switch (position) {
             case 0:
 //                DestacadoFragment destacadoFragment = new DestacadoFragment();
-                EventosFragment eventosFragment = new EventosFragment();
+                eventosFragment = new EventosFragment();
                 return eventosFragment;
             case 1:
-                FiestaFragment fiestaFragment  = new FiestaFragment();
+                fiestaFragment  = new FiestaFragment();
                 return fiestaFragment;
             case 2:
-                MusicaFragment musicaFragment = new MusicaFragment();
+                musicaFragment = new MusicaFragment();
                 return musicaFragment;
             case 3:
-                GastronomiaFragment gastronomiaFragment = new GastronomiaFragment();
+                gastronomiaFragment = new GastronomiaFragment();
                 return gastronomiaFragment;
             case 4:
-                DeporteFragment deporteFragment = new DeporteFragment();
+                deporteFragment = new DeporteFragment();
                 return deporteFragment;
             case 5:
-                OtrosFragment otrosFragment = new OtrosFragment();
+                otrosFragment = new OtrosFragment();
                 return otrosFragment;
             default:
                 return null;
