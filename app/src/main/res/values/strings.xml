@@ -6,6 +6,8 @@
     <string name="inicio">Usuario</string>
     <string name="title_activity_maps">Map</string>
 
-    <string name="tv_registro_mensaje">Disfruta de los beneficios</string>
-    <string name="tv_registro_mensaje2"> de ser usuario <font fgcolor='#61C600'> PREMIUM </font> gratis por un mes.</string>
+    <string name="tv_registro_mensaje2">Disfruta de los beneficios de ser usuario <font fgcolor="#33691E"> PREMIUM </font> gratis por un mes.</string>
+    <string name="usuario_item_navigation">Usuario</string>
+    <string name="eventos_item_navigation">Eventos</string>
+    <string name="mapa_item_navigation">Mapa</string>
 </resources>

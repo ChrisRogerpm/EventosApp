@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#151515"
+    android:background="#000000"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="5dp">
+    android:padding="10dp">
+    <RelativeLayout
+        android:background="#151515"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <RelativeLayout
             android:id="@+id/imagen"
             android:layout_width="match_parent"
@@ -18,32 +22,38 @@
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/contenido"
-            android:gravity="center"
             android:layout_below="@+id/imagen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout
                 android:orientation="horizontal"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
                     android:id="@+id/asistentes"
                     android:layout_margin="5dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <TextView
-                        android:text="Asistentes"
-                        android:textColor="#555555"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_marginTop="1dp"
+                        android:tint="#555555"
+                        android:src="@drawable/accountmultiple"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+
+
                     <TextView
                         android:id="@+id/cant_asistentes"
                         android:text="120"
-                        android:textColor="#919191"
-                        android:textSize="30sp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#555555"
+                        android:textSize="15sp"
+                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
@@ -51,48 +61,54 @@
                 <LinearLayout
                     android:id="@+id/valoracion"
                     android:layout_margin="5dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <TextView
-                        android:text="Valoracion"
-                        android:textColor="#555555"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:src="@drawable/star"
+                        android:tint="#555555"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+
                     <TextView
                         android:text="4.5"
-                        android:textSize="30sp"
-                        android:textColor="#919191"
+                        android:textSize="15sp"
+                        android:textColor="#555555"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/fecha"
-                    android:layout_gravity="center"
-                    android:layout_margin="20dp"
-                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
                         android:id="@+id/fecha_evento"
-                        android:textColor="#919191"
-                        android:textSize="20sp"
+                        android:textColor="#555555"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="13sp"
+                        android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/nombre_evento"
-                        android:layout_below="@+id/nombre_evento"
-                        android:text="Sabado 06"
-                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                        android:text="Sabado 06 AGO   |"/>
+                    <TextView
+                        android:id="@+id/Hora_evento"
+                        android:layout_marginLeft="10dp"
+                        android:text="10:00 PM"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#555555"
+                        android:textSize="13dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
-                <TextView
-                    android:text="300"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:background="@drawable/calendar"
-                    android:textColor="#ffffff"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
 
             </LinearLayout>
         </RelativeLayout>
@@ -100,33 +116,30 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_below="@id/contenido"
-        android:background="#0015ff"
+        android:background="#5db435"
         android:gravity="right"
+        android:alpha="0.5"
+        android:paddingRight="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="25dp">
 
         <TextView
             android:text="Entrada: "
-            android:textSize="20sp"
+            android:textSize="13sp"
             android:layout_gravity="center"
-            android:textColor="@color/colorWhite"
+            android:textColor="#ffffff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/precio_entrada"
-            android:text="s/. 20"
-            android:textSize="20sp"
+            android:text="S/. 20.00"
+            android:textSize="13sp"
             android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:textColor="@color/colorWhite"
+            android:textColor="#ffffff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-
     </LinearLayout>
-
-
-
     <TextView
         android:id="@+id/nombre_evento"
         android:layout_width="wrap_content"
@@ -137,14 +150,5 @@
         android:textSize="15sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/lugarevento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nombre_evento"
-        android:layout_toEndOf="@id/fecha_evento"
-        android:layout_toRightOf="@id/fecha_evento"
-        android:paddingLeft="5dp"
-        android:text="Discoteca: Tusan"
-        android:textColor="@color/colorWhite" />
+    </RelativeLayout>
 </RelativeLayout>

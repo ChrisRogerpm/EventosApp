@@ -60,7 +60,7 @@
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:alpha="0.5"
+            android:alpha="0.3"
             android:background="@drawable/button_corner"
             android:text="Ingresar"
             android:textColor="@color/colorWhite" />
@@ -88,23 +88,20 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_below="@+id/remember"
-        android:gravity="center"
+        android:gravity="bottom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
+
 
         <TextView
-            android:text="@string/tv_registro_mensaje"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
-            android:textAlignment="center"
-            android:textColor="@color/colorhint_registro_fragment"/>
-        <TextView
             android:text="@string/tv_registro_mensaje2"
-            android:layout_width="wrap_content"
+            android:layout_width="210dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:textAlignment="center"
-            android:textColor="@color/colorhint_registro_fragment"/>
+            android:layout_marginBottom="30dp"
+            android:textSize="12sp"
+            android:textColor="#555555"/>
 
     </LinearLayout>
 

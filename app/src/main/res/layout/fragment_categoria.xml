@@ -19,8 +19,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabMode="scrollable"
-            app:tabIndicatorColor="#61C600"
-            app:tabSelectedTextColor="#61C600"
+            app:tabIndicatorColor="#33691E"
+            app:tabTextColor="#555555"
+            app:tabSelectedTextColor="#33691E"
 
             android:layout_above="@+id/container_viewpager"/>
     </android.support.design.widget.AppBarLayout>

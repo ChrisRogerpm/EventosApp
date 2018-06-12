@@ -38,7 +38,6 @@ public class AdapterEvento extends RecyclerView.Adapter<AdapterEvento.EventoView
             imagenevento = (ImageView) v.findViewById(R.id.img_evento);
             nombreevento = (TextView) v.findViewById(R.id.nombre_evento);
             fechaevento = (TextView) v.findViewById(R.id.fecha_evento);
-            lugarevento = (TextView) v.findViewById(R.id.lugarevento);
 
             v.setOnClickListener(this);
         }

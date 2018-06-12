@@ -4,15 +4,15 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/account_svg"
-        android:title="@string/inicio" />
+        android:title=" " />
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/eventos" />
+        android:icon="@drawable/baseline_view_day_white_24dp"
+        android:title=" " />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/mapmarker"
-        android:title="@string/mapaevento" />
+        android:icon="@drawable/marcadordeposicion"
+        android:title=" " />
 </menu>
