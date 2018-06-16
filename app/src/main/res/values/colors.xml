@@ -2,17 +2,17 @@
 <resources>
     <color name="colorPrimary">#00000000</color><!--BARRA DE MENU RINCIPAL-->
     <color name="colorPrimaryDark">#000000</color><!--PRIMERA BARRA -->
-    <color name="colorAccent">#4075a2</color>
-    <color name="colorNavIcon">#333333</color> <!--COLOR ICONOS DE MENU PRINCIPAL -->
-    <color name="colorNavText">#ffffff</color>
+    <color name="colorAccent">#999999</color>   <!--COLOR CHECK BOX -->
+    <color name="colorNavIcon">#555555</color> <!--COLOR ICONOS DE MENU PRINCIPAL -->
+    <color name="colorNavText">#555555</color>  <!--COLOR TEXTO DE MENU PRINCIPAL -->
 
 
-    <color name="colorfondo">#000000</color> <!--COLOR SCREEN PLASH-->
+    <color name="colorfondo">#000000</color> <!--COLOR FONDO SCREEN PLASH-->
     <color name="colorText">#00b6cc</color>
-    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhite">#FFFFCC</color>    <!--COLOR TEXTO "INGRESAR"-->
     <color name="colorTransparentWhite">#cccccc</color>
 
 
 
-    <color name="colorhint_registro_fragment">#83848C</color>
+    <color name="colorhint_registro_fragment">#83848C</color>   <!--COLOR TEXTO DEL FRAGMENTO-->
 </resources>
