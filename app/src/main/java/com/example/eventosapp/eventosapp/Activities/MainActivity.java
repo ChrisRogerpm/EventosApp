@@ -35,10 +35,6 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.navigation_home:
                     CheckSesion();
                     return true;
-
-
-
-
                 case R.id.navigation_dashboard:
                     categoriaFragment = new CategoriaFragment();
                     setFragment(categoriaFragment);

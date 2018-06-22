@@ -3,22 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:animationCache="false"
-    android:background="#0E1D34"
     tools:context=".Fragments.EventoDetalleFragment">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:animationCache="false"
-        android:background="#0E1D34"
-        tools:context=".Fragments.EventoDetalleFragment">
-
-        <LinearLayout
-            android:id="@+id/header_detalleevento"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/imagen_evento_detalle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
@@ -26,118 +20,161 @@
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:background="@drawable/slider2" />
+        </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imagen_evento_detalle"
+        android:background="#000000">
+
+        <LinearLayout
+            android:id="@+id/entrada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5db435"
+            android:gravity="right"
+            android:alpha="0.5"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp">
+            <TextView
+                android:text="Entrada: "
+                android:textSize="13sp"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/precio_entrada"
+                android:text="S/. 20.00"
+                android:textSize="13sp"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
         <RelativeLayout
-            android:padding="10dp"
-            android:layout_below="@+id/header_detalleevento"
             android:id="@+id/contenido_detalleevento"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:layout_below="@+id/entrada"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-
-
-            <TextView
-                android:id="@+id/fecha_evento_detalle"
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="20dp"
-                android:text="19"
-                android:textColor="#969696"
-                android:textSize="30sp"
-                android:layout_marginLeft="20dp"
-                android:layout_alignParentLeft="true" />
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/fecha_nombre_"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/fecha_evento_detalle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="19"
+                        android:textColor="#969696"
+                        android:textSize="20sp"/>
+                    <TextView
+                        android:id="@+id/mes_evento_detalle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="MAY"
+                        android:textSize="15sp"
+                        android:textColor="#5db435"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/nombre_evento_detalle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="De reversa mami"
+                        android:textColor="#555555"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/mes_evento_detalle"
-                android:layout_below="@id/fecha_evento_detalle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="17dp"
-                android:text="MAY"
-                android:textSize="20sp"
-                android:textColor="#2333F9"
-                android:textStyle="bold"
-                android:layout_marginLeft="17dp"
-                android:layout_alignParentLeft="true" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/nombre_evento_detalle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="84dp"
-                android:text="De reversa mami"
-                android:textColor="@color/colorWhite"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="84dp" />
+                        <TextView
+                            android:id="@+id/direccion_evento_detalle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Solari Plaza"
+                            android:textColor="#5db435"
+                            android:textSize="15sp" />
+                        <ImageButton
+                            android:tint="#555555"
+                            android:src="@drawable/clock"
+                            android:scaleType="centerCrop"
+                            android:background="@null"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp" />
 
+                        <TextView
+                            android:id="@+id/hora_evento_detalle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="10dp"
+                            android:text="10:00"
+                            android:textColor="#555555"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
 
+                    </LinearLayout>
 
-            <TextView
-                android:id="@+id/direccion_evento_detalle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/nombre_evento_detalle"
-                android:layout_below="@+id/nombre_evento_detalle"
-                android:text="Solari Plaza"
-                android:textColor="#2333F9"
-                android:layout_alignLeft="@+id/nombre_evento_detalle" />
-
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/descripcion_evento"
+            android:layout_below="@+id/contenido_detalleevento"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/descripcion_evento_detalle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/mes_evento_detalle"
-                android:text="Descripcion Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                android:justificationMode="inter_word"
-                android:textColor="@color/colorWhite"
-                android:layout_alignParentLeft="true" />
+                android:text="Descripcion Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehender."
+                android:textColor="#555555"/>
         </RelativeLayout>
-
-        <TextView
-            android:id="@+id/tv_puntaje_valoracion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_alignParentStart="true"
-            android:layout_alignTop="@+id/tv_cantidad_asistentes"
-            android:layout_marginStart="152dp"
-            android:text="4.5"
-            android:textColor="@color/colorWhite"
-            android:textSize="30sp"
-            android:layout_marginLeft="152dp"
-            android:layout_alignParentLeft="true" />
         <LinearLayout
             android:id="@+id/datos"
             android:gravity="center"
-            android:layout_below="@id/contenido_detalleevento"
+            android:layout_below="@id/descripcion_evento"
             android:orientation="horizontal"
-            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <CheckBox
                 android:id="@+id/chk_asistentes"
                 android:layout_margin="5dp"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:clickable="true"
                 android:button="@null"
                 android:checked="false"
                 android:background="@drawable/asistentes"
-                android:focusable="true"
-                android:layout_marginLeft="16dp"/>
-
+                android:focusable="true"/>
             <TextView
                 android:layout_margin="5dp"
                 android:layout_gravity="center"
@@ -146,22 +183,21 @@
                 android:layout_height="wrap_content"
                 android:text="300"
                 android:textColor="@color/colorWhite"
-                android:textSize="30dp" />
+                android:textSize="20dp" />
             <CheckBox
                 android:id="@+id/chk_calificacion"
                 android:layout_margin="5dp"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:clickable="true"
                 android:button="@null"
                 android:checked="false"
-                android:background="@drawable/calificacion"
+                android:background="@drawable/star"
                 android:focusable="true"
                 android:layout_marginLeft="16dp"/>
-
             <TextView
                 android:layout_margin="5dp"
                 android:layout_gravity="center"
@@ -170,12 +206,12 @@
                 android:layout_height="wrap_content"
                 android:text="4.5"
                 android:textColor="@color/colorWhite"
-                android:textSize="30dp" />
+                android:textSize="20dp" />
             <CheckBox
                 android:id="@+id/chk_favorito"
                 android:layout_margin="10dp"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
@@ -185,55 +221,42 @@
                 android:background="@drawable/favorito"
                 android:focusable="true"
                 android:layout_marginLeft="16dp"/>
-
             <ImageButton
                 android:id="@+id/ubicacion_evento_detalle"
                 android:layout_margin="5dp"
-                android:scaleType="center"
+                android:scaleType="centerCrop"
                 android:padding="5dp"
                 android:background="@null"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icono_mapa"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/marcadordeposicion"/>
         </LinearLayout>
-
         <LinearLayout
             android:layout_below="@id/datos"
             android:id="@+id/organizador"
             android:layout_width="match_parent"
             android:layout_height="90dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:background="#1A293C"
+            android:background="#151515"
             android:orientation="horizontal"
             android:padding="10dp">
-
-
             <android.support.v7.widget.AppCompatImageButton
                 android:id="@+id/imagen_organizador"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_alignLeft="@+id/fecha_evento_detalle"
-                android:layout_alignParentBottom="true"
-                android:layout_alignStart="@+id/fecha_evento_detalle"
                 android:layout_marginBottom="34dp"
                 android:background="@null"
                 android:scaleType="centerCrop"
                 android:src="@drawable/logocauli" />
-
             <TextView
                 android:id="@+id/nombre_organizador"
+                android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
                 android:text="Cauli Eventos"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp" />
         </LinearLayout>
-
     </RelativeLayout>
-
+    </RelativeLayout>
 </ScrollView>
