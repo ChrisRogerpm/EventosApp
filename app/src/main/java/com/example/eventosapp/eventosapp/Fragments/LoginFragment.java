@@ -30,6 +30,9 @@ import com.android.volley.toolbox.Volley;
 import com.example.eventosapp.eventosapp.Activities.MainActivity;
 import com.example.eventosapp.eventosapp.R;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -87,7 +90,23 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         button_login.setOnClickListener(this);
         return v;
     }
-
+    public void GenerarSharedPreferences(String id) {
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("MiSesion", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("LoginOn", true);
+        editor.putString("id", id);
+        editor.apply();
+    }
+    public String ObtenerIDUsuarioLogeado(String response) {
+        String variable = "";
+        try {
+            JSONObject jsonResponse = new JSONObject(response);
+            variable = jsonResponse.getString("id");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return variable;
+    }
     public void Login() {
         final String email = textView_correo.getText().toString().trim();
         final String password = textView_password.getText().toString().trim();
@@ -96,20 +115,12 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        if (response.equalsIgnoreCase("success")) {
-                            SharedPreferences sharedPreferences = getActivity().getSharedPreferences("MiSesion", Context.MODE_PRIVATE);
-                            SharedPreferences.Editor editor = sharedPreferences.edit();
-                            editor.putBoolean("LoginOn", true);
-                            editor.putString("email", email);
-                            editor.apply();
+                        String id = ObtenerIDUsuarioLogeado(response);
 
-                            Intent intent = new Intent(getActivity(), MainActivity.class);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
+                        GenerarSharedPreferences(id);
 
-                        } else {
-                            Toast.makeText(getActivity(), response, Toast.LENGTH_SHORT).show();
-                        }
+                        Intent intent = new Intent(getActivity(), MainActivity.class);
+                        startActivity(intent);
                     }
                 },
                 new Response.ErrorListener() {

@@ -8,11 +8,9 @@
     android:background="#0E1D34"
     tools:context=".Fragments.EventoDetalleFragment">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:animationCache="false"
         android:background="#0E1D34"
         tools:context=".Fragments.EventoDetalleFragment">
@@ -21,6 +19,7 @@
             android:id="@+id/header_detalleevento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/imageview_eventodetalle"
                 android:layout_width="match_parent"
@@ -36,69 +35,67 @@
             android:layout_height="wrap_content">
 
 
-
             <TextView
                 android:id="@+id/fecha_evento_detalle"
                 android:layout_width="wrap_content"
                 android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_marginLeft="20dp"
                 android:layout_marginStart="20dp"
                 android:text="19"
                 android:textColor="#969696"
-                android:textSize="30sp"
-                android:layout_marginLeft="20dp"
-                android:layout_alignParentLeft="true" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/mes_evento_detalle"
-                android:layout_below="@id/fecha_evento_detalle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_below="@id/fecha_evento_detalle"
+                android:layout_marginLeft="17dp"
                 android:layout_marginStart="17dp"
                 android:text="MAY"
-                android:textSize="20sp"
                 android:textColor="#2333F9"
-                android:textStyle="bold"
-                android:layout_marginLeft="17dp"
-                android:layout_alignParentLeft="true" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/nombre_evento_detalle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="84dp"
                 android:layout_marginStart="84dp"
                 android:text="De reversa mami"
                 android:textColor="@color/colorWhite"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="84dp" />
-
+                android:textStyle="bold" />
 
 
             <TextView
                 android:id="@+id/direccion_evento_detalle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/nombre_evento_detalle"
                 android:layout_alignStart="@+id/nombre_evento_detalle"
                 android:layout_below="@+id/nombre_evento_detalle"
                 android:text="Solari Plaza"
-                android:textColor="#2333F9"
-                android:layout_alignLeft="@+id/nombre_evento_detalle" />
+                android:textColor="#2333F9" />
 
             <TextView
                 android:id="@+id/descripcion_evento_detalle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/mes_evento_detalle"
-                android:text="Descripcion Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                 android:justificationMode="inter_word"
-                android:textColor="@color/colorWhite"
-                android:layout_alignParentLeft="true" />
+                android:text="Descripcion Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                android:textColor="@color/colorWhite" />
         </RelativeLayout>
 
         <TextView
@@ -131,19 +128,16 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:clickable="true"
                 android:button="@null"
-                android:checked="false"
                 android:background="@drawable/asistentes"
-                android:focusable="true"
                 android:layout_marginLeft="16dp"/>
 
             <TextView
-                android:layout_margin="5dp"
-                android:layout_gravity="center"
                 android:id="@+id/tv_cant_asistntes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:text="300"
                 android:textColor="@color/colorWhite"
                 android:textSize="30dp" />

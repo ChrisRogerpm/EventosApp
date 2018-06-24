@@ -32,13 +32,14 @@ public class AdapterEvento extends RecyclerView.Adapter<AdapterEvento.EventoView
         TextView nombreevento;
         TextView fechaevento;
         TextView lugarevento;
+        TextView cantidad_asistentes;
 
         public EventoViewHolder(View v) {
             super(v);
             imagenevento = (ImageView) v.findViewById(R.id.img_evento);
             nombreevento = (TextView) v.findViewById(R.id.nombre_evento);
             fechaevento = (TextView) v.findViewById(R.id.fecha_evento);
-
+            cantidad_asistentes = (TextView) v.findViewById(R.id.cant_asistentes);
             v.setOnClickListener(this);
         }
 
@@ -69,6 +70,7 @@ public class AdapterEvento extends RecyclerView.Adapter<AdapterEvento.EventoView
     public void onBindViewHolder(EventoViewHolder viewHolder, int i) {
         Evento evento = items.get(i);
         viewHolder.nombreevento.setText(evento.getNombreevento());
+        viewHolder.cantidad_asistentes.setText(String.valueOf(evento.getAsistentes()));
         Glide.with(context)
                 .load(MainActivity.HOST +MainActivity.PATH+ evento.getImagenevento())
                 .into(viewHolder.imagenevento);

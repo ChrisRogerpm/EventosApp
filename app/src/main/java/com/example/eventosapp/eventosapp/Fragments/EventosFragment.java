@@ -85,8 +85,17 @@ public class EventosFragment extends Fragment implements AdapterEvento.Click {
                             JSONObject json = null;
                             try {
                                 json = response.getJSONObject(i);
+                                evento.setAsistentes(json.getInt("asistencia"));
+                                evento.setId_Evento(json.getInt("id"));
                                 evento.setNombreevento(json.getString("nombre_evento"));
+                                evento.setDescripcion_evento(json.getString("descripcion_evento"));
                                 evento.setImagenevento(json.getString("imagen"));
+                                evento.setFecha(json.getString("fecha_inicio_evento"));
+                                evento.setHora(json.getString("hora_evento"));
+                                evento.setDireccion(json.getString("direccion_evento"));
+                                evento.setLatitud(json.getDouble("latitud"));
+                                evento.setLongitud(json.getDouble("longitud"));
+
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
@@ -103,18 +112,96 @@ public class EventosFragment extends Fragment implements AdapterEvento.Click {
                 });
     }
 
+    public String ObtenerValorFecha(String result, int indice) {
+        String[] parts = result.split("-");
+        String nueva_cadena = parts[indice];
+        return nueva_cadena;
+    }
+
+    public String ObtenerMes(int mes) {
+        String ValorMes;
+        switch (mes) {
+            case 1:
+                ValorMes = "Enero";
+                break;
+            case 2:
+                ValorMes = "Febrero";
+                break;
+            case 3:
+                ValorMes = "Marzo";
+                break;
+            case 4:
+                ValorMes = "Abril";
+                break;
+            case 5:
+                ValorMes = "Mayo";
+                break;
+            case 6:
+                ValorMes = "Junio";
+                break;
+            case 7:
+                ValorMes = "Julio";
+                break;
+            case 8:
+                ValorMes = "Agosto";
+                break;
+            case 9:
+                ValorMes = "Septiembre";
+                break;
+            case 10:
+                ValorMes = "Octubre";
+                break;
+            case 11:
+                ValorMes = "Noviembre";
+                break;
+            case 12:
+                ValorMes = "Diciembre";
+                break;
+            default:
+                ValorMes = "Invalid month";
+                break;
+
+        }
+        return ValorMes;
+    }
+
     @Override
     public void onItemClick(AdapterEvento.EventoViewHolder holder, int posicion) {
+
+
+        String imagen_portada = eventoList.get(posicion).getImagenevento();
+        String dia = ObtenerValorFecha(eventoList.get(posicion).getFecha(), 2);
+        String mes = ObtenerMes(Integer.parseInt(ObtenerValorFecha(eventoList.get(posicion).getFecha(), 1)));
+        String descripcion = eventoList.get(posicion).getDescripcion_evento();
+        String id = String.valueOf(eventoList.get(posicion).getId_Evento());
+        String cantidad_asistentes = String.valueOf(eventoList.get(posicion).getAsistentes());
+        String direccion = eventoList.get(posicion).getDireccion();
+        double latitud = eventoList.get(posicion).getLatitud();
+        double longitud = eventoList.get(posicion).getLongitud();
+        String nombre_evento = eventoList.get(posicion).getNombreevento();
+
         EventoDetalleFragment eventoDetalleFragment = new EventoDetalleFragment();
+
+        Bundle bundle = new Bundle();
+
+        bundle.putString("nombre_evento",nombre_evento);
+        bundle.putString("imagen", imagen_portada);
+        bundle.putString("dia",dia);
+        bundle.putString("mes",mes);
+        bundle.putString("descripcion",descripcion);
+        bundle.putString("id_evento",id);
+        bundle.putString("cantidad_asistentes",cantidad_asistentes);
+        bundle.putString("direccion",direccion);
+        bundle.putDouble("latitud",latitud);
+        bundle.putDouble("longitud",longitud);
+
+        eventoDetalleFragment.setArguments(bundle);
+
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
-        .replace(R.id.fragment_container, eventoDetalleFragment,"tag")
+        .replace(R.id.fragment_container, eventoDetalleFragment)
         .addToBackStack("tag")
         .commit();
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
 }
