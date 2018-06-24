@@ -16,7 +16,7 @@
     android:layout_height="wrap_content">
     <Button
         android:id="@+id/button_logout"
-        android:alpha="0.3"
+        android:alpha="0.5"
         android:textColor="@color/colorWhite"
         android:layout_width="210dp"
         android:layout_height="wrap_content"

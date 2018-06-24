@@ -12,12 +12,12 @@
         <RelativeLayout
             android:id="@+id/imagen"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="200dp">
             <ImageView
                 android:id="@+id/img_evento"
                 android:scaleType="centerCrop"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:src="@drawable/slider1"/>
         </RelativeLayout>
     <RelativeLayout
@@ -43,7 +43,7 @@
                     <ImageView
                         android:layout_gravity="center"
                         android:layout_marginTop="1dp"
-                        android:tint="#555555"
+                        android:tint="#838282"
                         android:src="@drawable/accountmultiple"
                         android:layout_width="15dp"
                         android:layout_height="15dp" />
@@ -51,7 +51,7 @@
                         android:id="@+id/cant_asistentes"
                         android:text="120"
                         android:layout_marginLeft="5dp"
-                        android:textColor="#555555"
+                        android:textColor="#838282"
                         android:textSize="15sp"
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
                     <ImageView
                         android:layout_gravity="center"
                         android:src="@drawable/star"
-                        android:tint="#555555"
+                        android:tint="#838282"
                         android:layout_marginTop="1dp"
                         android:layout_width="15dp"
                         android:layout_height="15dp" />
@@ -78,7 +78,7 @@
                     <TextView
                         android:text="4.5"
                         android:textSize="15sp"
-                        android:textColor="#555555"
+                        android:textColor="#838282"
                         android:layout_gravity="center"
                         android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
@@ -88,23 +88,24 @@
                 <LinearLayout
                     android:id="@+id/fecha_hora"
                     android:orientation="horizontal"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
                         android:id="@+id/fecha_evento"
-                        android:textColor="#555555"
+                        android:textColor="#838282"
                         android:layout_marginLeft="20dp"
                         android:textSize="13sp"
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sabado 06 AGO   |"/>
+                        android:text=" 06 Agosto   |"/>
                     <TextView
                         android:id="@+id/Hora_evento"
                         android:layout_marginLeft="10dp"
                         android:text="10:00 PM"
                         android:layout_marginTop="5dp"
-                        android:textColor="#555555"
+                        android:textColor="#838282"
                         android:textSize="13dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -118,7 +119,6 @@
         android:layout_below="@id/contenido"
         android:background="#5db435"
         android:gravity="right"
-        android:alpha="0.5"
         android:paddingRight="10dp">
 
         <TextView
@@ -131,7 +131,7 @@
 
         <TextView
             android:id="@+id/precio_entrada"
-            android:text="S/. 20.00"
+            android:text="Libre"
             android:textSize="13sp"
             android:layout_gravity="center"
             android:textColor="#ffffff"
