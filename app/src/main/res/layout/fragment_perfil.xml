@@ -3,16 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/perfilusuario"
     android:orientation="vertical"
     tools:context=".Fragments.PerfilFragment">
 
-    <!-- TODO: Update blank fragment layout -->
 
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_marginTop="500dp"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <Button
         android:id="@+id/button_logout"
-        android:layout_width="wrap_content"
+        android:alpha="0.3"
+        android:textColor="@color/colorWhite"
+        android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Button" />
-
+        android:background="@drawable/button_corner"
+        android:text="Cerrar Sesion" />
+</LinearLayout>
 </RelativeLayout>
