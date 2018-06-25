@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/perfilusuario"
+    android:background="@drawable/background_perfil"
     android:orientation="vertical"
     tools:context=".Fragments.PerfilFragment">
 
@@ -21,6 +21,6 @@
         android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button_corner"
-        android:text="Cerrar Sesion" />
+        android:text="Cerrar Sesión" />
 </LinearLayout>
 </RelativeLayout>
