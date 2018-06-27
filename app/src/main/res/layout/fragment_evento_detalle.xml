@@ -31,7 +31,7 @@
             android:id="@+id/entrada"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#5db435"
+            android:background="#6e8425"
             android:gravity="right"
             android:paddingBottom="5dp"
             android:paddingRight="10dp"

@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     LoginFragment loginFragment;
     CategoriaFragment categoriaFragment;
     EventosMapFragment eventosMapFragment;
-    public static final String HOST = "http://192.168.8.102";
+    public static final String HOST = "http://192.168.8.100";
     public static final String PATH = "/images/";
     private boolean CheckLogin = false;
 
