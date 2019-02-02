@@ -41,6 +41,7 @@ public class EventoDetalleFragment extends Fragment {
     CheckBox checkBox_favorito;
     ImageButton imageButton_mapa;
 
+
     ImageView imageview_eventodetalle;
     TextView fecha_evento_detalle, mes_evento_detalle, nombre_evento_detalle, direccion_evento_detalle, descripcion_evento_detalle;
     TextView tv_cant_asistntes;

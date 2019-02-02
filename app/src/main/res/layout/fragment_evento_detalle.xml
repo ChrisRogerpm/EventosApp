@@ -306,6 +306,38 @@
                 android:textColor="#555"
                 android:textSize="15sp" />
         </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_below="@+id/organizador"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:src="@drawable/pavi"
+                />
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:src="@drawable/torval"/>
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:background="@null"
+                android:src="@drawable/collasuyo"/>
+
+        </LinearLayout>
     </RelativeLayout>
     </RelativeLayout>
 </ScrollView>
